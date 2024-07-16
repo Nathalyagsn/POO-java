@@ -37,7 +37,7 @@ public class Banco {
         if(this.saldo >= valor) {
             this.saldo -= valor;
         } else {
-            System.out.println("Sacando... " + valor);
+            System.out.println("Sacando..." + valor);
             System.out.println("Saldo Insuficiente!");
         }
     }
