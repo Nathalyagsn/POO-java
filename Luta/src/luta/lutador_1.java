@@ -1,0 +1,6 @@
+package luta;
+
+
+class lutador {
+
+}
