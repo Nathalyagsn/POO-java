@@ -20,6 +20,11 @@ public class Combate {
         
         l[5] = new Lutador("Nerdart", "EUA", 30, 1.81f, 105.7f, 12, 2, 4);
         l[5].status();
+        
+       Luta ufc = new Luta();
+       ufc.marcarLuta(l[4], l[5]);
+       ufc.lutar();
+       
     }
 
 }
