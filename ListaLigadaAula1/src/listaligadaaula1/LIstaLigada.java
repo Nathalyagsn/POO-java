@@ -45,13 +45,18 @@ public class LIstaLigada {
         }
     }
     
-    public void remover(String novoValor){
-    
+    public void remover(String valorProcurado){
+        Elemento atual = this.primeiro;
+        for(int i=0; i < this.getTamanho(); i++);{
+            if(atual.getValor().equalsIgnoreCase(valorProcurado)){
+            
+            }
+        }
     }
     
     public Elemento get(int posicao){
         Elemento atual = this.primeiro;
-        for(int i=0; i <= posicao; i++){
+        for(int i=0; i < posicao; i++){
             if(atual.getProximo()!= null){
                 atual = atual.getProximo();
             }
