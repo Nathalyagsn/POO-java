@@ -46,11 +46,14 @@ public class LIstaLigada {
     }
     
     public void remover(String valorProcurado){
+        Elemento anterior = null;
         Elemento atual = this.primeiro;
         for(int i=0; i < this.getTamanho(); i++);{
             if(atual.getValor().equalsIgnoreCase(valorProcurado)){
-            
+            anterior.setProximo(atual.getProximo());
             }
+            anterior = atual;
+            atual = atual.getProximo();
         }
     }
     
