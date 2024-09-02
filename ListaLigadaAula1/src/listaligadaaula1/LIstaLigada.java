@@ -48,9 +48,24 @@ public class LIstaLigada {
     public void remover(String valorProcurado){
         Elemento anterior = null;
         Elemento atual = this.primeiro;
-        for(int i=0; i < this.getTamanho(); i++);{
+        
+        for(int i=0; i < this.getTamanho(); i++){
             if(atual.getValor().equalsIgnoreCase(valorProcurado)){
-            anterior.setProximo(atual.getProximo());
+                if(this.tamanho == 1){
+                    this.primeiro = null;
+                    this.ultimo = null;
+                }else if(atual == primeiro){
+                    this.primeiro = atual.getProximo();
+                    atual.setProximo(null);
+                } else if (atual == ultimo){
+                    this.ultimo = anterior;
+                    anterior.setProximo(null);
+                } else {
+                anterior.setProximo(atual.getProximo());
+                atual = null;
+                }        
+                this.tamanho--;
+                break;
             }
             anterior = atual;
             atual = atual.getProximo();
