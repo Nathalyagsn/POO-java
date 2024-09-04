@@ -22,7 +22,7 @@ public class ListaLigadaAula1 {
         lista.remover("SP");
         lista.adicionar("PE");
         
-        System.out.println("Tamanho da lista " + lista.getTamanho());
+        System.out.println("Tamanho da lista: " + lista.getTamanho());
         
         for(int i=0; i< lista.getTamanho(); i++){
             System.out.println(lista.get(i).getValor());

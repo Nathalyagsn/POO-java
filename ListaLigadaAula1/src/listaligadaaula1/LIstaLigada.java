@@ -1,6 +1,6 @@
 package listaligadaaula1;
-public class LIstaLigada {
-    private Elemento primeiro;
+public class LIstaLigada<TIPO> {
+    private Elemento<TIPO> primeiro;
     private Elemento ultimo;
     private int tamanho;
     
@@ -8,19 +8,19 @@ public class LIstaLigada {
         this.tamanho = 0;
     }
 
-    public Elemento getPrimeiro() {
+    public Elemento<TIPO> getPrimeiro() {
         return primeiro;
     }
 
-    public void setPrimeiro(Elemento primeiro) {
+    public void setPrimeiro(Elemento<TIPO> primeiro) {
         this.primeiro = primeiro;
     }
 
-    public Elemento getUltimo() {
+    public Elemento<TIPO> getUltimo() {
         return ultimo;
     }
 
-    public void setUltimo(Elemento ultimo) {
+    public void setUltimo(Elemento<TIPO> ultimo) {
         this.ultimo = ultimo;
     }
 
@@ -32,7 +32,7 @@ public class LIstaLigada {
         this.tamanho = tamanho;
     }
     
-    public void adicionar(String novoValor){
+    public void adicionar(TIPO novoValor){
         Elemento novoElemento = new Elemento(novoValor);
         if (this.primeiro == null && this.ultimo == null){
             this.primeiro = novoElemento;

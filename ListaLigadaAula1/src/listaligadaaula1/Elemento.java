@@ -1,5 +1,5 @@
 package listaligadaaula1;
-public class Elemento {
+public class Elemento<TIPO> {
     private String valor;
     private Elemento proximo;
     
