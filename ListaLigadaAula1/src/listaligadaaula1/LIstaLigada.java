@@ -33,7 +33,7 @@ public class LIstaLigada<TIPO> {
     }
     
     public void adicionar(TIPO novoValor){
-        Elemento novoElemento = new Elemento(novoValor);
+        Elemento<TIPO> novoElemento = new Elemento<TIPO>(novoValor);
         if (this.primeiro == null && this.ultimo == null){
             this.primeiro = novoElemento;
             this.ultimo = novoElemento;
@@ -45,12 +45,12 @@ public class LIstaLigada<TIPO> {
         }
     }
     
-    public void remover(String valorProcurado){
-        Elemento anterior = null;
-        Elemento atual = this.primeiro;
+    public void remover(TIPO valorProcurado){
+        Elemento<TIPO> anterior = null;
+        Elemento<TIPO> atual = this.primeiro;
         
         for(int i=0; i < this.getTamanho(); i++){
-            if(atual.getValor().equalsIgnoreCase(valorProcurado)){
+            if(atual.getValor().equals(valorProcurado)){
                 if(this.tamanho == 1){
                     this.primeiro = null;
                     this.ultimo = null;

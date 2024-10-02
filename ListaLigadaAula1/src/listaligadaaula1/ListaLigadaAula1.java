@@ -4,7 +4,7 @@ public class ListaLigadaAula1 {
     
     public static void main(String[] args) {
         
-        LIstaLigada lista = new LIstaLigada();
+        LIstaLigada<String> lista = new LIstaLigada<String>();
         lista.adicionar("AC");
         lista.adicionar("BA");
         lista.adicionar("CE");
